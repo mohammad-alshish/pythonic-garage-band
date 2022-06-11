@@ -1,6 +1,6 @@
 import pytest
 
-from pythonic_garage_band.band import (
+from pythonic_garage_band.pythonic_garage_band import (
     Band,
     Musician,
     Guitarist,
@@ -9,12 +9,12 @@ from pythonic_garage_band.band import (
 )
 
 
-
 def test_guitarist_str():
     joan = Guitarist("Joan Jett")
     actual = str(joan)
     expected = "My name is Joan Jett and I play guitar"
     assert actual == expected
+
 
 
 def test_guitarist_repr():
@@ -30,6 +30,7 @@ def test_drummer_str():
     actual = str(sheila)
     expected = "My name is Sheila E. and I play drums"
     assert actual == expected
+
 
 
 def test_drummer_repr():
@@ -53,6 +54,7 @@ def test_bassist_repr():
     actual = repr(meshell)
     expected = "Bassist instance. Name = Meshell Ndegeocello"
     assert actual == expected
+
 
 
 def test_band_name():
@@ -126,7 +128,6 @@ def test_play_solos_for_whole_band(one_band):
     assert solos[0] == "face melting guitar solo"
     assert solos[1] == "bom bom buh bom"
     assert solos[2] == "rattle boom crash"
-
 
 
 def test_class_tracks_instances():
